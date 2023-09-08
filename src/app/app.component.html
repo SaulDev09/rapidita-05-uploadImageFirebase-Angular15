@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Upload Images to Firebase</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Upload</a>
+        </li>
+      </ul>
+    </div> -->
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Choose files</h3>
+      <div>
+        <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+        <input class="form-control" type="file" id="formFileMultiple" multiple (change)="selectFiles($event)"
+          accept="image/png, image/gif, image/jpeg">
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <h4>Upload files</h4>
+      <button (click)="uploadImages()" class="btn btn-success">Upload to Firebase</button>
+      <button (click)="deleteImages()" class="btn btn-danger ms-3">Delete</button>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>File Name</th>
+            <th>Size</th>
+            <th>Progress</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let file of files">
+            <!-- {{ file | json}} -->
+            <td [ngClass]="{ 'text-green': file.progress >= 100 }">
+              {{ file.fileName }}
+            </td>
+            <td>
+              {{ file.file.size /1024 | number: '.2-2' }} KB
+            </td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': file.progress + '%' }"></div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let item of items | async">
+      <div class="card">
+        <img [src]="item.url" class="card-img-top" [alt]="item.name">
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+          <p class="card-text">{{ item.name }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
