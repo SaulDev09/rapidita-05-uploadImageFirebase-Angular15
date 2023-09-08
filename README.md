@@ -1,27 +1,24 @@
-# UploadImageFirebase
+# Rapidita Upload Image to Firebase Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
+<p align="center">  
+  <img src="https://github.com/SaulDev09/rapidita-05-uploadImageFirebase-Angular15/assets/54446713/14185189-917a-4453-b6e9-f7dc29e99d20"
+</p>
 
-## Development server
+## Steps
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Download the project
+2. Use node 18.17.1 (nvm use v18.17.1)
+3. Install Dependencies: npm i
+4. Run the project: ng s
 
-## Code scaffolding
+## Repo:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+https://github.com/SaulDev09/rapidita-05-uploadImageFirebase-Angular15
 
-## Build
+## Demo:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+https://p29gr9-4200.csb.app/
 
-## Running unit tests
+## CodeSandbox:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://codesandbox.io/p/github/SaulDev09/rapidita-05-uploadImageFirebase-Angular15
